@@ -4,25 +4,6 @@
 
 Sample ASP.NET Core reference application, powered by Microsoft, demonstrating a single-process (monolithic) application architecture and deployment model. If you're new to .NET development, read the [Getting Started for Beginners](https://github.com/dotnet-architecture/eShopOnWeb/wiki/Getting-Started-for-Beginners) guide.
 
-A list of Frequently Asked Questions about this repository can be found [here](https://github.com/dotnet-architecture/eShopOnWeb/wiki/Frequently-Asked-Questions).
-
-## Overview Video
-
-[Steve "ardalis" Smith](https://twitter.com/ardalis) recorded [a live stream providing an overview of the eShopOnWeb reference app](https://www.youtube.com/watch?v=vRZ8ucGac8M&ab_channel=Ardalis) in October 2020. 
-
-## eBook
-
-This reference application is meant to support the free .PDF download ebook: [Architecting Modern Web Applications with ASP.NET Core and Azure](https://aka.ms/webappebook), updated to **ASP.NET Core 8.0**. [Also available in ePub/mobi formats](https://dotnet.microsoft.com/learn/web/aspnet-architecture).
-
-You can also read the book in online pages at the .NET docs here: 
-https://docs.microsoft.com/dotnet/architecture/modern-web-apps-azure/
-
-[<img src="https://dotnet.microsoft.com/blob-assets/images/e-books/aspnet.png" height="300" />](https://dotnet.microsoft.com/learn/web/aspnet-architecture)
-
-The **eShopOnWeb** sample is related to the [eShopOnContainers](https://github.com/dotnet/eShopOnContainers) sample application which, in that case, focuses on a microservices/containers-based application architecture. However, **eShopOnWeb** is much simpler in regards to its current functionality and focuses on traditional Web Application Development with a single deployment.
-
-The goal for this sample is to demonstrate some of the principles and patterns described in the [eBook](https://aka.ms/webappebook). It is not meant to be an eCommerce reference application, and as such it does not implement many features that would be obvious and/or essential to a real eCommerce application.
-
 > ### VERSIONS
 > #### The `main` branch is currently running ASP.NET Core 8.0.
 > #### Older versions are tagged.
@@ -40,16 +21,6 @@ The goal for this sample is to demonstrate some of the principles and patterns d
 - Testing ASP.NET Core MVC Apps
 - Development Process for Azure-Hosted ASP.NET Core Apps
 - Azure Hosting Recommendations for ASP.NET Core Web Apps
-
-## Running the sample using Azd template
-
-The store's home page should look like this:
-
-![eShopOnWeb home page screenshot](https://user-images.githubusercontent.com/782127/88414268-92d83a00-cdaa-11ea-9b4c-db67d95be039.png)
-
-The Azure Developer CLI (`azd`) is a developer-centric command-line interface (CLI) tool for creating Azure applications.
-
-You need to install it before running and deploying with Azure Developer CLI.
 
 ### Windows
 
@@ -76,10 +47,6 @@ Then, execute the `azd init` command to initialize the environment.
 azd init -t dotnet-architecture/eShopOnWeb 
 ```
 
-Run `azd up` to provision all the resources to Azure and deploy the code to those resources.
-```
-azd up 
-```
 
 According to the prompt, enter an `env name`, and select `subscription` and `location`, these are the necessary parameters when you create resources. Wait a moment for the resource deployment to complete, click the web endpoint and you will see the home page.
 
@@ -161,8 +128,3 @@ You should be able to make requests to localhost:5106 for the Web project, and l
 
 You can also run the applications by using the instructions located in their `Dockerfile` file in the root of each project. Again, run these commands from the root of the solution (where the .sln file is located).
 
-## Community Extensions
-
-We have some great contributions from the community, and while these aren't maintained by Microsoft we still want to highlight them.
-
-[eShopOnWeb VB.NET](https://github.com/VBAndCs/eShopOnWeb_VB.NET) by Mohammad Hamdy Ghanem
